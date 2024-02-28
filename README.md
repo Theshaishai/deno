@@ -35,3 +35,34 @@ character.ai
      2，PC端：WINDOWS，MAC，PC端APP版本，下载，安装，卸载，更新
      3，手机端APP：不同手机，安卓（华为，谷歌，三星，小米等等）和苹果（不同的型号，不同的IOS版本），软件的下载，安装，更新，卸载
 
+
+
+
+
+
+class PC():
+    def denglu(self):
+        from selenium import webdriver                      # 从selenium调用web驱动器
+        import time                                         # 调用时间
+        import os
+        from selenium.webdriver.common.by import By         #
+        from selenium.webdriver import Keys                 # 导入键盘包
+        from selenium.webdriver import Keys, ActionChains   # 导入鼠标包
+        driver = webdriver.Chrome()  # 驱动的路径
+        driver.maximize_window()                            # 窗口最大化
+        # driver.minimize_window()                          #窗口最小化
+
+        driver.get("https://beta.character.ai/")
+        time.sleep(10)
+        # 登录账号密码
+        driver.find_element(By.XPATH, '').clear()
+        driver.find_element(By.XPATH, '').clear()
+        time.sleep(2)
+        driver.find_element(By.XPATH, '').send_keys()
+        driver.find_element(By.XPATH, '').send_keys("")
+        driver.find_element(By.XPATH,'').click()
+        time.sleep(2)
+
+P=PC
+P.denglu(1)
+
